@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+ /* background-color: pink;*/
+  background: url(../questions.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*text-align: center;*/
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+  /*doubt regarding fiing the height */
+
+}
+form{
+  align-items: center;
+    width:700px;
+    margin:10vh auto 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:30px;
+}
+
+input[type=text], input[type=password] {
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+  padding: 15px;
+  margin: 5px 0 22px 0;  
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus 
+/*doubt: if we add validation while submitting, it is also impacting while doing moving the techs -input[type=button]:focus */
+ {
+  background-color: orange;
+  outline: none;
+  text-align: left;
+ /* float: right;*/
+
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+ul{
+  width: 100px;
+  list-style:none;
+  height: 200px;
+  margin:0;
+  overflow:scroll;
+  padding:30px;
+  text-indent:10px;
+  border: 2px solid black; 
+}
+li{
+  line-height:25px;
+}
+horizontalview{
+  
+display: inline;
+flex-direction: row;
+padding: 20%;
+}
+<!--doubt:cant see styles on submit button >
+  submitbtn {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+<script>
+  
+
+</script>
+</head>
+<body>
+   <form id="form">
+      <div class="container">
+      <!--<center> </center>-->
+         <h1> User Registeration Form</h1> 
+        <hr>
+        <label align:left> Name </label> <span></span>
+        <input type="text" name="name" placeholder= "name" size="15" required> 
+        <label align:left> Email_Id </label>
+        <input type="text" name="email" placeholder="email_id" size="15"/ required></br>
+        <label> password</label>
+        <input type="password" name="pwd" placeholder="pwd" size="15"/ required>
+        <label> Re-Type </label>
+        <input type="password" name="rpwd" placeholder="rpwd" size="15"/ required>
+      </br>
+      <label align:left> Select one or more Technologies... </label>
+      <div>
+        <input type="checkbox" id="techs" name="op">
+          <label for="opt">Coding</label> <br>
+           <input type="checkbox" id="option1"  name="option1">
+           <label for="option2"> Operating Systems </label></br>
+              <input type="checkbox" id="o" name="op">
+            <label for="opt">System Hardware</label> </br>
+                <input type="checkbox" id="option3" name="option3">
+            <label for="option2"> CyberSecurity   </label></br>
+            <input type="checkbox" id="option5" name="option4">
+            <label for="option4">  Software Engineering   </label></br>
+            <input type="checkbox" id="o" name="op">
+            <label for="opt">Artificial Intelligence</label> <br>
+            <input type="checkbox" id="option6"  name="option6">
+            <label for="option6">     Data Analytics </label>
+          
+            </div>  <!--Doubt : adding validation and styling without impacting other buttons-->
+      <a href="success.html">
+      <input id="submitbtn" type="button" value="Submit" />  
+      </a>
+         
+    </div>
+  </form>
+  
+</body>
+</html>

@@ -1,0 +1,133 @@
+<Html>  
+    <head>  
+
+       <title> Registration Page  </title>
+       <style>
+            body {
+                    background: url(../bgimage.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    text-align: center;
+
+                  }
+ .container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.listbox {
+width: 150px;
+height: 200px;
+text-align: center;
+}
+.buttons{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin : 0 20px;
+}
+.buttons button{
+margin-bottom:10px;
+background-color: black;
+color: white;
+border-radius: 50px;
+font-size: larger;
+font-weight: bold;
+}
+
+        </style>  
+<script>
+
+ var temp =[];
+function moveSelectedOptions(source,destination)
+{
+   var selectedOptions= Array.from(source.selectedOptions);
+   console.log(selectedOptions);
+   for(var i=0;i<selectedOptions.length;i++)
+   {
+        destination.appendChild(selectedOptions[i]);
+    }
+}
+
+function moveAllOptions(source,destination)
+{
+   var options= Array.from(source.options);
+for(var i=0;i<options.length;i++)
+{
+destination.appendChild(options[i]);
+}
+function moveOneItem()
+{
+alert("itemselected");
+    var source = document.getElementById("listbox1");
+console.log(source.selectedOptions);
+   // source.selectedOptions();
+}
+
+}
+</script>
+
+    </head>  
+   
+    <body>  
+          <h1 style="text-align: center ;background-color:red;color:black"> Welcome to Tech Check!!! Register HERE</h1><br><br> 
+          <!--img src="../images.png" alt="techcheck" style="width:20%" align=right-->
+          <form style="text-align:center">
+  
+              <label> Name </label>         
+                    <input type="text" name="name" size="15"/> 
+            
+Email:  
+<input type="email" id="email" name="email"/>  <br><br> 
+<!--  <label>   
+Phone :  
+</label>  
+<input type="text" name="country code"  value="" size="2"/>   
+<input type="text" name="phone" size="10"/> <br> <br>  -->
+ 
+Password:  
+<input type="Password" id="pass" name="pass">    
+Re-type password:  
+<input type="Password" id="repass" name="repass"> <br> <br> 
+  
+ 
+ <!-- This portion adding available technologies -->                        
+   
+ <center>
+<!-- need help in defining listboxes in display page-->
+<h2> Available technologies    Selected Technologies</h2>
+
+<div class ="container">
+    <select id =listbox1 class ="listbox" multiple>
+<option value = "Python"> Python</option>
+<option value = "Java"> java</option>
+<option value = "C++"> C++</option>
+<option value = "JS"> JavaScript</option>
+<option value = "css"> CSS</option>
+<option value = "MySQL"> MySQL</option>
+</select>
+<div class="buttons">
+  <!--  <button onclick="moveSelectedOptions(listbox1,listbox2)"> > </button> -->
+  <button onclick ="moveOneItem()" > > </button>
+  <button onclick="moveAllOptions(listbox1,listbox2)"> >> </button>
+   <button onclick="moveSelectedOptions(listbox2,listbox1)"> < </button>
+   <button  onclick="moveAllOptions(listbox2,listbox1)"> << </button>
+</div>
+<select id =listbox2 class ="listbox" multiple>
+</select>
+</div> 
+</center>
+       
+    
+   
+  
+<br>  
+<br>  
+
+<a href="success.html">
+<input type="button" value="Submit"/>  
+</a>
+
+
+</body>  
+</html>  
